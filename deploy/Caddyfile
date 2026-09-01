@@ -1,0 +1,5 @@
+gabrielrichard.dev {
+	root * /srv
+	encode gzip zstd
+	file_server
+}
