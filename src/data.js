@@ -1,149 +1,132 @@
 export const navLinks = [
-  { href: '#territorio', label: 'Território' },
-  { href: '#atuacao', label: 'Atuação' },
-  { href: '#tecnologias', label: 'Tecnologias' },
-  { href: '#projetos', label: 'Projetos' },
-  { href: '#contato', label: 'Contato' },
+  { href: '#solucoes', label: 'Soluções' },
+  { href: '#seguranca', label: 'Segurança' },
+  { href: '#credito-rural', label: 'Crédito rural' },
+  { href: '#mapa-multicriterio', label: 'Mapa multicritério' },
+  { href: '#metodo', label: 'Método' },
+  { href: '#ecossistema', label: 'Ecossistema' },
 ]
 
-export const stats = [
-  { value: 2003, suffix: '', label: 'Ano de fundação' },
-  { value: 5000, suffix: ' m²', label: 'Coberturas verdes implantadas' },
-  { value: 7, suffix: '', label: 'Frentes de atuação sistêmica' },
-  { value: 25, suffix: '+', label: 'Telhados verdes projetados' },
+export const capabilities = [
+  'Sensoriamento remoto',
+  'Geoprocessamento',
+  'Modelagem ambiental',
+  'Drones e satélites',
+  'Inteligência territorial',
+  'Dossiês técnicos',
 ]
 
-export const services = [
+export const solutions = [
   {
     index: '01',
-    title: 'Diagnósticos socioambientais',
-    text: 'Leitura integrada da paisagem: dinâmicas naturais, sociais, legais e econômicas. Estudos de viabilidade e potencialidades de uso, ocupação e regeneração — da moradia urbana ao território.',
+    tag: 'Cidades',
+    title: 'Arborização e conforto urbano',
+    text: 'Priorização de áreas para plantio com base em cobertura vegetal, ilhas de calor, circulação, densidade urbana e indicadores de qualidade do ar. O resultado orienta espécies, locais e fases de implantação.',
   },
   {
     index: '02',
-    title: 'Design ecológico',
-    text: 'Zoneamento, master plan e design permacultural para territórios e edificações autossuficientes. Planos de água, energia, alimentos, resíduos e infraestrutura verde no curto, médio e longo prazo.',
+    tag: 'Crédito rural',
+    title: 'Monitoramento de áreas financiadas',
+    text: 'Acompanhamento da propriedade por imagens de satélite e drone para verificar mudanças no uso do solo, supressão vegetal e implantação de plantio ou restauração acordada no financiamento.',
   },
   {
     index: '03',
-    title: 'Tecnologias ecológicas',
-    text: 'Adaptação customizada de sistemas ao contexto de cada projeto: saneamento ecológico, drenagem, fontes renováveis, telhados verdes, paisagismo multifuncional e gestão de resíduos.',
+    tag: 'Território',
+    title: 'Detecção de mudanças ambientais',
+    text: 'Comparação temporal de imagens para identificar desmatamento, degradação, ocupações e alterações relevantes antes que o risco se transforme em passivo.',
   },
   {
     index: '04',
-    title: 'Arquitetura e engenharia',
-    text: 'Projetos técnicos de bioarquitetura, estrutura, hidrossanitário, elétrico e luminotécnico, paisagismo e energias renováveis — sempre apropriados ao clima e aos recursos locais.',
+    tag: 'Infraestrutura verde',
+    title: 'Jardins e soluções baseadas na natureza',
+    text: 'Planejamento de jardins de chuva, corredores verdes, áreas de infiltração e paisagismo funcional considerando água, solo, clima, circulação e manutenção.',
   },
   {
     index: '05',
-    title: 'Execução de obras',
-    text: 'Gestão integral ou parcial de obras e infraestrutura verde. Execução com segurança, destinação correta de resíduos e respeito às condições de quem constrói.',
+    tag: 'Evidência',
+    title: 'Dossiês e diligência socioambiental',
+    text: 'Organização de mapas, séries históricas, registros de campo, fontes e critérios de análise em documentos claros para decisão, auditoria e prestação de contas.',
   },
   {
     index: '06',
-    title: 'Educação e relações sociais',
-    text: 'Processos participativos, canteiro-escola, permacultura e diagnóstico rural participativo. Formação para a autossuficiência de pessoas, grupos e comunidades.',
+    tag: 'Operação',
+    title: 'Levantamentos com drones',
+    text: 'Planejamento de voo, captura e processamento de imagens de alta resolução para diagnóstico, medição, fiscalização e acompanhamento de intervenções.',
   },
 ]
 
-export const technologies = [
+export const sectors = [
   {
-    index: 'I',
-    title: 'Água',
-    text: 'Abastecimento, drenagem, saneamento ecológico, captação de chuva, uso e reúso — em consonância com nascentes, vales e microbacias.',
+    code: '01 / Gestão pública',
+    title: 'Prefeituras que precisam transformar dados em prioridade de investimento.',
+    text: 'Apoiamos secretarias de meio ambiente, planejamento, infraestrutura e saúde a localizar problemas, comparar cenários e justificar onde agir primeiro.',
+    items: [
+      'Plano de arborização orientado por evidências',
+      'Mapeamento de ilhas de calor e áreas vulneráveis',
+      'Infraestrutura verde e drenagem urbana',
+      'Fiscalização e acompanhamento territorial',
+    ],
   },
   {
-    index: 'II',
-    title: 'Energia',
-    text: 'Fontes renováveis, design passivo e telhados verdes que regulam o microclima e reduzem a demanda da edificação.',
-  },
-  {
-    index: 'III',
-    title: 'Alimentos',
-    text: 'Paisagismo multifuncional e produção no território: cultivo, beneficiamento e manejo que recriam ciclos naturais.',
-  },
-  {
-    index: 'IV',
-    title: 'Resíduos',
-    text: 'Consumo consciente, compostagem, reciclagem e ciclagem de nutrientes — o descarte vira fertilidade.',
+    code: '02 / Setor financeiro',
+    title: 'Bancos que precisam conhecer o risco ambiental por trás de cada operação.',
+    text: 'Apoiamos crédito, risco, compliance e sustentabilidade com evidências geoespaciais para avaliar propriedades e acompanhar obrigações ao longo do contrato.',
+    items: [
+      'Triagem socioambiental de propriedades',
+      'Monitoramento de garantias e áreas financiadas',
+      'Alertas de mudança no uso do solo',
+      'Dossiê técnico para análise e auditoria',
+    ],
   },
 ]
 
 export const approach = [
   {
     step: '01',
-    title: 'Leitura da paisagem',
-    text: 'Observação, sobreposição e cruzamento de altimetria, hidrografia, bioclima, legislação, vizinhança e saberes do lugar. Cada território é um sistema vivo.',
+    title: 'Definir a decisão',
+    text: 'Começamos pela pergunta que a instituição precisa responder, pelos critérios aplicáveis e pelo nível de evidência necessário.',
   },
   {
     step: '02',
-    title: 'Planejamento integrado',
-    text: 'Diretrizes de ocupação, zoneamento e fluxogramas que organizam edificações, produção, preservação e infraestrutura de baixo impacto ao longo do tempo.',
+    title: 'Integrar os dados',
+    text: 'Reunimos imagens, bases públicas, levantamentos de campo e informações do cliente em uma leitura territorial única.',
   },
   {
     step: '03',
-    title: 'Regeneração contínua',
-    text: 'Projetos e obras que recriam ciclos — água, solo, biodiversidade e comunidade — para que o ambiente saia mais vivo do que encontrou.',
+    title: 'Calcular e comparar',
+    text: 'Aplicamos análise espacial e modelos multicritério para localizar prioridades, mudanças, riscos e oportunidades.',
+  },
+  {
+    step: '04',
+    title: 'Entregar evidência',
+    text: 'Traduzimos o resultado em mapa, painel, plano ou dossiê com fontes e critérios rastreáveis para sustentar a decisão.',
   },
 ]
 
-export const projects = [
+export const scenarios = [
   {
-    year: '2017',
-    place: 'Serra da Mantiqueira',
-    title: 'Urbanismo ecológico',
-    meta: 'Monteiro Lobato · SP',
-    text: 'Vila sustentável com 65% de preservação. Leitura bioclimática para densidade ocupacional e regeneração da paisagem.',
-    image:
-      'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1400&q=80',
+    eyebrow: 'Cenário de aplicação · Prefeitura',
+    question: 'Onde plantar árvores para gerar maior benefício urbano?',
+    context: 'Cruzamento de cobertura vegetal, calor, população, circulação, equipamentos públicos e condições de plantio.',
+    result: 'Mapa de prioridade por trecho, critérios de implantação e sequência recomendada de investimento.',
+    signal: 'Prioridade territorial',
+    image: '/images/territorio-urbano.webp',
+    imageAlt: 'Vista aérea de área urbana com camadas de análise territorial e zonas prioritárias em laranja',
   },
   {
-    year: '2017',
-    place: 'São Francisco Xavier',
-    title: 'Sítio J&M',
-    meta: 'Diagnóstico e planejamento',
-    text: 'Leitura de paisagem e planejamento integrado: ocupação, saneamento ecológico e travessia de água.',
-    image:
-      'https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1400&q=80',
-  },
-  {
-    year: '2021',
-    place: 'Moema · São Paulo',
-    title: 'Retrofit regenerativo',
-    meta: 'Edifício misto · 245 m²',
-    text: 'Cobertura e cortina verdes, manejo de água e biodiversidade — a cidade se transforma por dentro dela mesma.',
-    image:
-      'https://images.unsplash.com/photo-1518531933037-91b2f5f229cc?auto=format&fit=crop&w=1400&q=80',
-  },
-  {
-    year: '2016',
-    place: 'Cumbe Canavieira · CE',
-    title: 'MACCC',
-    meta: 'Museu arqueológico comunitário',
-    text: 'Obra e educação em técnicas naturais com mobilização quilombola, território e geração de renda.',
-    image:
-      'https://images.unsplash.com/photo-1590076215667-875dabe0e226?auto=format&fit=crop&w=1400&q=80',
-  },
-  {
-    year: '—',
-    place: 'Turmalina',
-    title: 'Vila Verde',
-    meta: 'Condomínio rural',
-    text: 'Urbanismo ecológico para ocupação de baixo impacto, infraestrutura verde e vida em comunidade.',
-    image:
-      'https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=1400&q=80',
+    eyebrow: 'Cenário de aplicação · Banco',
+    question: 'A área financiada cumpriu o compromisso ambiental?',
+    context: 'Comparação de imagens ao longo do contrato, limites da propriedade e evidências fornecidas pelo tomador.',
+    result: 'Linha do tempo das mudanças, alertas objetivos e dossiê técnico para a equipe de risco ou compliance.',
+    signal: 'Evidência temporal',
+    image: '/images/monitoramento-rural.webp',
+    imageAlt: 'Vista aérea de propriedade rural com limites geográficos e áreas de atenção ambiental destacadas',
   },
 ]
 
-export const marquee = [
-  'Permacultura',
-  'Bioconstrução',
-  'Saneamento ecológico',
-  'Telhados verdes',
-  'Master plan',
-  'Leitura de paisagem',
-  'Design passivo',
-  'Paisagismo funcional',
-  'Ecovilas',
-  'Diagnóstico territorial',
+export const deliverables = [
+  { code: 'MAP', title: 'Mapas de decisão', text: 'Camadas, prioridades e recortes territoriais prontos para orientar equipes e investimentos.' },
+  { code: 'DSH', title: 'Painéis e indicadores', text: 'Visão executiva para acompanhar áreas, ocorrências, evolução e pontos que exigem atenção.' },
+  { code: 'DOS', title: 'Dossiês técnicos', text: 'Documento consolidado com metodologia, fontes, mapas, cronologia e evidências da análise.' },
+  { code: 'MON', title: 'Monitoramento contínuo', text: 'Rotina de atualização e alertas conforme a frequência e o risco de cada operação.' },
 ]

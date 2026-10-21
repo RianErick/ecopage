@@ -1,43 +1,20 @@
-import { useLayoutEffect, useRef } from 'react'
-import gsap from 'gsap'
-import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import { technologies } from '../data'
-
-gsap.registerPlugin(ScrollTrigger)
+import { sectors } from '../data'
 
 export default function Technologies() {
-  const root = useRef(null)
-
-  useLayoutEffect(() => {
-    const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches
-    const ctx = gsap.context(() => {
-      if (reduced) return
-      gsap.from('.tech-card', {
-        y: 36,
-        opacity: 0,
-        duration: 0.85,
-        stagger: 0.1,
-        ease: 'power3.out',
-        scrollTrigger: { trigger: root.current, start: 'top 70%' },
-      })
-    }, root)
-
-    return () => ctx.revert()
-  }, [])
-
   return (
-    <section className="tech" id="tecnologias" ref={root}>
-      <div className="section">
-        <p className="kicker">Tecnologias ambientais</p>
-        <h2 className="section-title">
-          Sistemas que recriam <em>ciclos naturais</em>
-        </h2>
-        <div className="tech-grid">
-          {technologies.map((item) => (
-            <article className="tech-card" key={item.title}>
-              <span className="tech-card__index">{item.index}</span>
-              <h3>{item.title}</h3>
-              <p>{item.text}</p>
+    <section className="sectors" id="setores">
+      <div className="shell">
+        <div className="section-head section-head--light">
+          <div><p className="section-index">04 / Para quem</p><h2>Uma base técnica. Duas frentes de decisão.</h2></div>
+          <p>A mesma inteligência territorial responde a necessidades diferentes — da política pública à gestão de risco socioambiental.</p>
+        </div>
+        <div className="sectors__grid">
+          {sectors.map((sector) => (
+            <article className="sector-card" key={sector.code}>
+              <span className="sector-card__code">{sector.code}</span>
+              <h3>{sector.title}</h3>
+              <p>{sector.text}</p>
+              <ul>{sector.items.map((item) => <li key={item}>{item}</li>)}</ul>
             </article>
           ))}
         </div>

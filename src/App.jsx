@@ -1,40 +1,37 @@
-import { useCallback, useState } from 'react'
 import Approach from './components/Approach'
 import Contact from './components/Contact'
-import Cursor from './components/Cursor'
 import Footer from './components/Footer'
 import Hero from './components/Hero'
-import Loader from './components/Loader'
 import Manifesto from './components/Manifesto'
 import Marquee from './components/Marquee'
+import MulticriteriaProduct from './components/MulticriteriaProduct'
 import Nav from './components/Nav'
+import Programs from './components/Programs'
+import ProductShowcase from './components/ProductShowcase'
 import Projects from './components/Projects'
 import Services from './components/Services'
+import SatelliteCompliance from './components/SatelliteCompliance'
 import Technologies from './components/Technologies'
+import Trust from './components/Trust'
 
 export default function App() {
-  const [ready, setReady] = useState(false)
-  const [loading, setLoading] = useState(true)
-  const onReveal = useCallback(() => setReady(true), [])
-  const onDone = useCallback(() => setLoading(false), [])
-
   return (
     <>
-      <a className="sr-only" href="#territorio">
-        Pular para o conteúdo
-      </a>
-      <div className="grain" />
-      <Cursor />
-      {loading ? <Loader onReveal={onReveal} onDone={onDone} /> : null}
+      <a className="skip-link" href="#conteudo">Pular para o conteúdo</a>
       <Nav />
-      <main>
-        <Hero ready={ready} />
-        <Manifesto />
+      <main id="conteudo">
+        <Hero />
         <Marquee />
+        <Manifesto />
+        <Trust />
         <Services />
         <Technologies />
+        <SatelliteCompliance />
+        <ProductShowcase />
+        <MulticriteriaProduct />
         <Approach />
         <Projects />
+        <Programs />
         <Contact />
       </main>
       <Footer />

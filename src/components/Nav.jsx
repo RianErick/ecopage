@@ -1,43 +1,27 @@
-import { useLayoutEffect, useRef } from 'react'
-import gsap from 'gsap'
-import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import { useEffect, useState } from 'react'
 import Logo from './Logo'
 import { navLinks } from '../data'
 
-gsap.registerPlugin(ScrollTrigger)
-
 export default function Nav() {
-  const root = useRef(null)
+  const [solid, setSolid] = useState(false)
 
-  useLayoutEffect(() => {
-    const ctx = gsap.context(() => {
-      ScrollTrigger.create({
-        trigger: '#territorio',
-        start: 'top 64px',
-        onEnter: () => root.current?.classList.add('is-solid'),
-        onLeaveBack: () => root.current?.classList.remove('is-solid'),
-      })
-    }, root)
-
-    return () => ctx.revert()
+  useEffect(() => {
+    const update = () => setSolid(window.scrollY > 24)
+    update()
+    window.addEventListener('scroll', update, { passive: true })
+    return () => window.removeEventListener('scroll', update)
   }, [])
 
   return (
-    <header className="nav" ref={root}>
-      <a className="nav__logo" href="#topo">
+    <header className={`nav${solid ? ' is-solid' : ''}`}>
+      <a className="nav__logo" href="#topo" aria-label="Ecosapiens — início">
         <Logo />
-        <span>Ecosapiens</span>
+        <span><strong>Ecosapiens</strong><small>Inteligência ambiental</small></span>
       </a>
-      <nav className="nav__links" aria-label="Principal">
-        {navLinks.map((link) => (
-          <a key={link.href} href={link.href}>
-            {link.label}
-          </a>
-        ))}
+      <nav className="nav__links" aria-label="Navegação principal">
+        {navLinks.map((link) => <a key={link.href} href={link.href}>{link.label}</a>)}
       </nav>
-      <a className="nav__cta" href="mailto:contato@ecosapiens.eco.br">
-        Fale conosco
-      </a>
+      <a className="button button--small" href="#contato">Falar com a Ecosapiens</a>
     </header>
   )
 }

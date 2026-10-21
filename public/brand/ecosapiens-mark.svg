@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title desc">
+  <title id="title">Ecosapiens</title>
+  <desc id="desc">Árvore com raízes e anéis territoriais</desc>
+  <circle cx="32" cy="32" r="29" fill="#071827"/>
+  <circle cx="32" cy="32" r="25" fill="none" stroke="#8fdcc7" stroke-width="1.5" opacity=".72"/>
+  <path d="M13 36a19 19 0 0 1 38 0M18 36a14 14 0 0 1 28 0" fill="none" stroke="#33b99c" stroke-width="1.4" stroke-linecap="round" opacity=".55"/>
+  <path d="M22.3 28.8a7 7 0 0 1 4.9-11.9A8.1 8.1 0 0 1 42 19.8a6.8 6.8 0 0 1-.3 13.5H22.9a5.4 5.4 0 0 1-.6-4.5Z" fill="#8fdcc7"/>
+  <path d="M30.2 29.2h3.6v12.2h-3.6z" fill="#f3f6f5"/>
+  <g fill="none" stroke="#f3f6f5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M32 39.5v5.2M32 43.2l-8 6.3M32 43.2l8 6.3M29.2 45.3l-2.4 6.4M34.8 45.3l2.4 6.4M25.7 48l-6.2-.2M38.3 48l6.2-.2"/>
+  </g>
+  <circle cx="32" cy="32" r="2" fill="#33b99c"/>
+</svg>
