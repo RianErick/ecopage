@@ -1,12 +1,12 @@
+import Logo from './Logo'
+
 export default function Footer() {
   return (
     <footer className="footer">
-      <div className="footer__row">
-        <p>© {new Date().getFullYear()} Ecosapiens</p>
-        <p>Soluções em sustentabilidade · Fortaleza, CE</p>
-        <a href="https://ecosapiens.eco.br" target="_blank" rel="noreferrer">
-          ecosapiens.eco.br
-        </a>
+      <div className="shell footer__inner">
+        <div className="footer__brand"><Logo /><div><strong>Ecosapiens</strong><span>Inteligência ambiental</span></div></div>
+        <p>GovTech ambiental · evidência, segurança e rastreabilidade.</p>
+        <div className="footer__meta"><span>Fortaleza · CE · Brasil</span><span>© {new Date().getFullYear()} Ecosapiens</span></div>
       </div>
     </footer>
   )

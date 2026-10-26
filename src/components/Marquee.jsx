@@ -1,37 +1,11 @@
-import { useLayoutEffect, useRef } from 'react'
-import gsap from 'gsap'
-import { marquee } from '../data'
+import { capabilities } from '../data'
 
 export default function Marquee() {
-  const root = useRef(null)
-
-  useLayoutEffect(() => {
-    const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches
-    const ctx = gsap.context(() => {
-      if (reduced) return
-      const track = root.current.querySelector('.marquee__track')
-      gsap.to(track, {
-        xPercent: -50,
-        duration: 28,
-        ease: 'none',
-        repeat: -1,
-      })
-    }, root)
-
-    return () => ctx.revert()
-  }, [])
-
-  const items = [...marquee, ...marquee]
-
   return (
-    <div className="marquee" ref={root} aria-hidden="true">
-      <div className="marquee__track">
-        {items.map((item, i) => (
-          <span className="marquee__item" key={`${item}-${i}`}>
-            {item}
-            <span className="marquee__dot" />
-          </span>
-        ))}
+    <div className="capability-bar" aria-label="Capacidades técnicas">
+      <span className="capability-bar__label">Capacidades</span>
+      <div className="capability-bar__items">
+        {capabilities.map((item) => <span key={item}>{item}</span>)}
       </div>
     </div>
   )

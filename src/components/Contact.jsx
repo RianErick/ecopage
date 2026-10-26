@@ -1,45 +1,15 @@
-import { useLayoutEffect, useRef } from 'react'
-import gsap from 'gsap'
-import { ScrollTrigger } from 'gsap/ScrollTrigger'
-
-gsap.registerPlugin(ScrollTrigger)
-
 export default function Contact() {
-  const root = useRef(null)
-
-  useLayoutEffect(() => {
-    const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches
-    const ctx = gsap.context(() => {
-      if (reduced) return
-      gsap.from('.contact__inner > *', {
-        y: 36,
-        opacity: 0,
-        duration: 0.9,
-        stagger: 0.12,
-        ease: 'power3.out',
-        scrollTrigger: { trigger: root.current, start: 'top 75%' },
-      })
-    }, root)
-
-    return () => ctx.revert()
-  }, [])
-
   return (
-    <section className="paper" id="contato" ref={root}>
-      <div className="section contact">
-        <div className="contact__inner">
-          <p className="kicker">Contato</p>
-          <h2 className="section-title">
-            Vamos ler o seu <em>território</em>
-          </h2>
-          <p className="lead">
-            Conte sobre o sítio, o edifício, a comunidade ou o empreendimento. Montamos a
-            equipe certa para cada desafio — sempre com rigor técnico e olhar regenerativo.
-          </p>
-          <a className="contact__mail" href="mailto:contato@ecosapiens.eco.br">
-            contato@ecosapiens.eco.br
-          </a>
-          <p className="contact__loc">Fortaleza · CE · Brasil</p>
+    <section className="contact" id="contato">
+      <div className="shell contact__inner">
+        <p className="section-index">11 / Contato</p>
+        <div>
+          <h2>Vamos estruturar uma solução segura para o seu território?</h2>
+          <p>Conte o desafio, a área de interesse e o resultado esperado. Preparamos uma conversa técnica adequada a órgãos públicos, instituições e parceiros de inovação.</p>
+          <div className="contact__actions">
+            <a className="button button--light" href="mailto:contato@ecosapiens.eco.br?subject=Apresentação%20institucional%20Ecosapiens">Solicitar apresentação institucional <span aria-hidden="true">↗</span></a>
+            <a className="contact__mail" href="mailto:contato@ecosapiens.eco.br">contato@ecosapiens.eco.br</a>
+          </div>
         </div>
       </div>
     </section>
