@@ -10,7 +10,11 @@
   },
   "routes": [
     {
-      "pattern": "ecosapiens.nodewave.app",
+      "pattern": "ecosapiensit.com.br",
+      "custom_domain": true
+    },
+    {
+      "pattern": "www.ecosapiensit.com.br",
       "custom_domain": true
     }
   ]
